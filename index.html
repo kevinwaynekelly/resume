@@ -1,0 +1,367 @@
+<!-- wp:html -->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Kevin Kelly's professional portfolio as an Electrical & Computer Engineer with a comprehensive background in both hardware and software engineering.">
+      <meta name="keywords" content="Kevin Kelly, Electrical Engineer, Computer Engineer, Portfolio">
+      <title>Kevin Kelly - Electrical & Computer Engineer</title>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLCPVLVTD3"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-YLCPVLVTD3');
+      </script>
+      <style>
+         body {
+         font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         color: #333;
+         background-color: #f7f7f7;
+         line-height: 1.6;
+         }
+         header, section, footer {
+         margin: 30px auto;
+         padding: 20px;
+         max-width: 960px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+         }
+         header {
+         background-color: #003366;
+         color: white;
+         border-radius: 10px;
+         }
+         header a {
+         color: black;
+         background-color: white;
+         padding: 5px 10px;
+         border-radius: 5px;
+         text-decoration: none;
+         transition: background-color 0.3s, color 0.3s;
+         }
+         header a:hover {
+         background-color: #0055a5;
+         color: #f0f0f0;
+         }
+         header p {
+         font-size: 1.2em;
+         }
+         section {
+         background-color: white;
+         border-radius: 10px;
+         }
+         p1 {
+         display: block;
+         margin-top: 1em;
+         margin-bottom: 1em;
+         margin-left: 0;
+         margin-right: 0;
+         font-size: 17px;
+         }
+         h1, h2, h3, .sub-info, a {
+         font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+         }
+         h1 {
+         margin: 0;
+         font-size: 36px;
+         font-weight: bold;
+         letter-spacing: -1px;
+         color: white;
+         }
+         h2 {
+         border-bottom: 4px solid #003366;
+         color: #003366;
+         padding-bottom: 10px;
+         margin-bottom: 20px;
+         font-size: 28px;
+         font-weight: bold;
+         }
+         h3 {
+         color: #0055a5;
+         font-size: 24px;
+         font-weight: 500;
+         }
+         .sub-info {
+         margin-top: 7px;
+         font-style: italic;
+         color: #555;
+         font-size: 16px;
+         }
+         p {
+         font-size: 17px;
+         }
+         footer {
+         background-color: #003366;
+         color: white;
+         text-align: center;
+         padding: 10px;
+         border-radius: 10px;
+         }
+         li {
+         padding-bottom: 5px;
+         }
+         @media (max-width: 768px) {
+         header, section, footer {
+         margin: 15px;
+         padding: 10px;
+         }
+         h1, h3 {
+         font-size: 1.5em;
+         }
+         p, li{
+         font-size: 0.9rem;
+         }
+         header p, header a, p1, a {
+         font-size: 0.9em;
+         }
+         }
+         @media (max-width: 480px) {
+         h1, h3 {
+         font-size: 1.2em;
+         }
+         p{
+         font-size: 0.8rem;
+         }
+         li{
+         font-size: 0.7rem;
+         }
+         header p, header a, p1, a {
+         font-size: 0.5em;
+         }
+         }
+         /* Dark theme styles */
+         .dark-mode {
+         background-color: #121212; /* Darker background for better contrast */
+         color: #E0E0E0; /* Soft white for text */
+         }
+         .dark-mode header, .dark-mode section, .dark-mode footer {
+         background-color: #1E1E1E; /* Slightly lighter than the body for depth */
+         color: #E0E0E0;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for 3D effect */
+         }
+         .dark-mode header a {
+         color: #000000; /* Black color for links */
+         transition: color 0.3s;
+         }
+         .dark-mode a{
+         color: #E0E0E0;
+         transition: color 0.3s;
+         }
+         .dark-mode p1 {
+         color: #E0E0E0;
+         }
+         .dark-mode header a:hover {
+         background-color: #1E88E5; /* Brighter blue for hover effects */
+         color: #ffffff;
+         border-radius: 5px; /* Rounded corners for a modern look */
+         }
+         /* Styling adjustments for headers to maintain hierarchy and readability */
+         .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+         color: #64B5F6; /* Using the same light blue for headings */
+         }
+         .dark-mode h2 {
+         border-bottom: 2px solid #1E88E5; /* Thinner border in a sharper blue */
+         }
+         .dark-mode .sub-info {
+         color: #90CAF9; /* Very light blue for sub-information for better readability */
+         }
+         #theme-toggle {
+         font-family: 'Segoe UI', Arial, sans-serif;
+         font-size: 16px;
+         padding: 10px 20px;
+         background-color: #ffffff;
+         color: #003366;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         outline: none;
+         transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+         }
+         #theme-toggle:hover {
+         background-color: #00457C;
+         color: #ffffff;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+         }
+         .dark-mode #theme-toggle {
+         background-color: #1E88E5;
+         color: #ffffff;
+         }
+         .dark-mode #theme-toggle:hover {
+         background-color: #0D47A1;
+         }
+         /* Ensuring form elements are also styled appropriately */
+         .dark-mode input, .dark-mode select, .dark-mode textarea {
+         background-color: #333333;
+         color: #E0E0E0;
+         border: 1px solid #444444;
+         }
+         /* Responsive adjustments for smaller screens */
+         @media (max-width: 768px) {
+         #theme-toggle {
+         font-size: 14px; /* Slightly smaller font size */
+         padding: 8px 16px; /* Slightly smaller padding */
+         }
+         }
+         @media (max-width: 480px) {
+         #theme-toggle {
+         font-size: 12px; /* Even smaller font size for very small screens */
+         padding: 6px 12px; /* Reduced padding */
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header style="display: flex; justify-content: space-between; align-items: center;">
+         <div>
+            <h1>Kevin Kelly</h1>
+            <p>Electrical & Computer Engineer</p>
+            <p>San Antonio, Texas, United States 78222</p>
+            <button id="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+         </div>
+         <nav>
+            <p>Email: <a href="mailto:kevinwaynekelly@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Kevin Kelly">kevinwaynekelly@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/kevinwaynekelly/" target="_blank" rel="noopener noreferrer" aria-label="Visit Kevin's LinkedIn">www.linkedin.com</a></p>
+            <p>Resume: <a href="https://drive.google.com/file/d/1faYerKmWyI8Eoqr0KWyKHTJrBnSuG9i8/view" target="_blank" rel="noopener noreferrer" aria-label="View Kevin's Resume">Executive Summary</a></p>
+         </nav>
+      </header>
+      <main>
+         <section>
+            <h2>Professional Summary</h2>
+            <p>As a University of Texas at Austin graduate, I possess a solid foundation in hardware and software engineering, with expertise in low-level programming languages like x86 and ARM Assembly, and high-level languages such as Java, Python, HTML, C++, C, JavaScript, and SQL. My skills extend to designing, configuring, and deploying hardware systems, and I am well-versed in Agile and Waterfall methodologies. I am driven by the challenges of solving complex problems and innovating, with a keen eye on technological trends to implement new technologies or methods effectively. Eager to join a team of proficient engineers, I aim to apply my expertise to solve challenging problems and contribute to a culture of collaboration and innovation, fostering personal and professional growth.</p>
+         </section>
+         <!-- Section showcasing projects -->
+         <section>
+            <h2>Projects</h2>
+            <!-- Article for each project -->
+            <article>
+               <h3>Formal Circuit Verification Algorithm</h3>
+               <p class="sub-info">Sponsored by Cadence Design Systems Inc.</p>
+               <p>In my senior design project at the University of Texas at Austin, our team developed a C++ program aimed at breaking loops in strongly connected components of a directed graph, crucial for enhancing the efficiency of formal verification processes in electronic design. Our approach utilized a graph generator, Tarjan’s algorithm for identifying strongly connected components, and several algorithms for finding the minimum feedback arc set, such as the Eades and FKT approximations and a recursive backtracking algorithm for exact solutions. The project tackled challenges in runtime complexity and memory constraints, ensuring the program's functionality across various test cases and graph sizes. This tool not only aids in simplifying digital circuits but also maintains critical connections, making it pivotal in verification and data extraction across social networking systems.</p>
+            </article>
+            <article>
+               <h3>ARM-Based USB Game Controller</h3>
+               <p class="sub-info">Hardware Keystone</p>
+               <p>At the University of Texas at Austin, I engineered the PCB and circuitry for a USB game controller integrating an ARM platform with two joysticks and 12 buttons. This project exemplified my ability to lead hardware design to software integration, demonstrating my comprehensive skills in hardware and software engineering as well as my capacity for problem-solving and efficient project execution.</p>
+            </article>
+            <article>
+               <h3>Website Data Management and Deployment</h3>
+               <p class="sub-info">Software Keystone</p>
+               <p>During my educational journey, I led the full-stack deployment of a project management website utilizing React, Node.js, MongoDB, Heroku, Python, and SQL. This project demonstrated my ability to manage complex data systems and ensure efficient data handling, particularly through the integration of REST API calls for seamless data exchange and functionality enhancement. My involvement in this endeavor highlighted my solid foundation in software development and my proficiency in delivering comprehensive solutions tailored to operational requirements.</p>
+            </article>
+            <article>
+               <h3>Real-Time Facial Expression Recognition</h3>
+               <p class="sub-info">Digital Image Processing and Machine Learning</p>
+               <p>This project leverages the Viola-Jones object detection algorithm to recognize facial expressions in real-time and control smart home devices based on these expressions. Utilizing OpenCV for Haar cascades, the system identifies expressions such as happiness, sadness, and surprise, and uses IFTTT integration to execute commands that adjust lighting, enhancing the environment based on the user's mood. The system accurately detects targeted facial expressions and dynamically adjusts home lighting to reflect or enhance the user's mood, demonstrating a seamless integration of software and hardware that improves human-device interaction.</p>
+            </article>
+            <article>
+               <h3>AI Detection System Requirements</h3>
+               <p class="sub-info">Requirements Engineering</p>
+               <p>Centered on the critical task of requirements engineering, this project involved extensive stakeholder analysis, requirements elicitation, and system specification to develop a tool for detecting AI-generated content in academic work. By structuring detailed requirement sessions with stakeholders such as educators and IT professionals, and focusing on integration with learning management systems, the project emphasized a systematic approach to capturing precise functional and non-functional requirements, ensuring the tool effectively maintains academic integrity.</p>
+            </article>
+            <article>
+               <h3>Personal Server Endeavor</h3>
+               <p class="sub-info">Personal Project</p>
+               <p>As part of an ongoing personal project, I am deploying microservices to enhance the security, privacy, and performance of my home network. I utilize applications with redundancy for robust data handling, ensuring data integrity. Additionally, I manage microservices for private domain name resolution and operate local caches to increase request efficiency. This endeavor requires overseeing multiple Linux virtual machines to develop and deploy applications for Docker.</p>
+            </article>
+         </section>
+         <section>
+            <h2>Employment History</h2>
+            <article>
+               <h3>Audio Video Student Supervisor</h3>
+               <p class="sub-info">The University of Texas at Austin, Austin, TX — Sep 2021 - Aug 2023</p>
+               <p>I directed and managed a team of more than 15 technicians with a primary focus on delivering high-quality events that met our clients' expectations. My responsibilities also included the upkeep and upgrading of suite infrastructures to align with the latest technology standards and practices. Additionally, I played a crucial role in training and supervising new hires to ensure they adhered to the high standards set by my leadership.</p>
+            </article>
+            <article>
+               <h3>Audio Video Cactus Café Operator</h3>
+               <p class="sub-info">The University of Texas at Austin, Austin, TX — Sep 2021 - Aug 2023</p>
+               <p>Collaborating directly with clients at the Cactus Café, I specialized in live sound services, ensuring their needs were not only met but promptly executed. This role required an in-depth knowledge of the venue's technology and equipment, enabling me to provide exceptional audio experiences.</p>
+            </article>
+            <article>
+               <h3>Audio Video Student Operator</h3>
+               <p class="sub-info">The University of Texas at Austin, Austin, TX — Feb 2020 - Aug 2023</p>
+               <p>I was actively involved in providing Live Sound services for clients across the entire Texas Union, entailing direct interaction with clients to fulfill their specific needs and immediate execution of those requirements. This role demanded a thorough understanding of the venue's technological capabilities and equipment. Additionally, the coordination between team members and clients was essential for precisely meeting and executing the event's requirements.</p>
+            </article>
+            <article>
+               <h3>Audio Video Assistant</h3>
+               <p class="sub-info">The University of Texas at Austin, Austin, TX — Sep 2019 - Sep 2021</p>
+               <p>I supported the realization of the event's vision and implemented decisions as directed by the stage manager. This included contributing suggestions for enhancements to elevate the event's quality and seeking clarification to ensure tasks were completed accurately and in alignment with the intended outcome.</p>
+            </article>
+            <article>
+               <h3>Information Technology Intern</h3>
+               <p class="sub-info">East Central Independent School District, San Antonio, TX — May 2018 - Aug 2018</p>
+               <p>I specialized in repairing a wide array of school equipment, including replacing parts in laptops and desktop computers vital for the technological operations within the school district. Additionally, I gained expertise in deploying new hardware and configuring it for use by employees and students.</p>
+            </article>
+         </section>
+         <section>
+            <h2>Education</h2>
+            <article>
+               <h3>Bachelor of Science in Electrical Engineering</h3>
+               <p class="sub-info">The University of Texas at Austin, Austin, TX — Aug 2019 - May 2023</p>
+               <p>During my time at the University of Texas at Austin, my education focused on developing strong skills in communication, testing, and iterative development, providing a solid foundation for my engineering career. This also provided me with years of professional experience in programming languages from binary to assembly to higher-level languages such as x86 Assembly, ARM Assembly, Java, Python, HTML, C++, C, JavaScript, and SQL.</p>
+            </article>
+         </section>
+         <section>
+            <h2>Skills</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+               <div>
+                  <h3>Languages</h3>
+                  <p>ARM Assembly, C, C++, C#, Java, JavaScript, Python, x86 Assembly, SQL.</p>
+               </div>
+               <div>
+                  <h3>Technologies/Frameworks</h3>
+                  <p>Cascading Style Sheets (CSS), HTML, HTML5, Linux, Operating Systems, Printed Circuit Board (PCB) Design, Amazon Web Services (AWS), Internet of Things (IoT), OpenCV, Cascade Models, React.js, Node.js.</p>
+               </div>
+               <div>
+                  <h3>Tools</h3>
+                  <p>Git, Docker, MATLAB, MongoDB, Redis, PostgreSQL, Version Control Tools, Wordpress.</p>
+               </div>
+               <div>
+                  <h3>Other</h3>
+                  <p>Agile Methodology, Waterfall Methodology, Project Management, Requirements Engineering, Network Administration, Unit Testing, Data Structures, Databases.</p>
+               </div>
+            </div>
+         </section>
+         <section>
+            <h2>References</h2>
+            <p>The following are references who can attest to my professional qualifications and work experience:</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+               <div>
+                  <h3>Barry Alvear</h3>
+                  <p1><strong>Position:</strong> Technical Coordinator</p1>
+                  <p1><strong>Company:</strong> The University of Texas at Austin</p1>
+                  <p1><strong>Email:</strong> <a href="mailto:barryalvear@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Barry Alvear">barryalvear@gmail.com</a></p1>
+                  <p1><strong>Phone:</strong> Available upon request.</p1>
+               </div>
+               <div>
+                  <h3>Oscar Sanchez</h3>
+                  <p1><strong>Position:</strong> Technical Services Manager</p1>
+                  <p1><strong>Company:</strong> The University of Texas at Austin</p1>
+                  <p1><strong>Email:</strong> <a href="mailto:oscar.sanchez@austin.utexas.edu" target="_blank" rel="noopener noreferrer" aria-label="Email Oscar Sanchez">oscar.sanchez@austin.utexas.edu</a></p1>
+                  <p1><strong>Phone:</strong> Available upon request.</p1>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <p>&copy; 2024 Kevin Kelly. All rights reserved.</p>
+      </footer>
+      <script>
+         function toggleTheme() {
+             var body = document.body;
+             var themeToggleButton = document.getElementById('theme-toggle');
+             body.classList.toggle('dark-mode');
+             
+             if (body.classList.contains('dark-mode')) {
+                 themeToggleButton.textContent = 'Switch to Light Mode';
+             } else {
+                 themeToggleButton.textContent = 'Switch to Dark Mode';
+             }
+         }
+      </script>
+   </body>
+</html>
+<!-- /wp:html -->
