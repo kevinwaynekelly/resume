@@ -39,6 +39,7 @@
 			    --text-color: #E0E0E0;
 			    --background-color: #121212;
 			    --link-color: white;
+			    --header-link-color: black; /* Additional variable for header links in dark mode */
 			}
 
 			body {
@@ -73,6 +74,15 @@
 			    text-decoration: none;
 			    transition: background-color 0.3s, color 0.3s;
 			}
+
+			header p > a {
+			    color: var(--link-color); /* Ensuring header links are black in light mode */
+			}
+
+			.dark-mode header a, .dark-mode header p > a {
+			    color: var(--header-link-color); /* Ensuring header links are black in dark mode */
+			}
+
 			header a:hover {
 			    background-color: var(--secondary-color);
 			    color: #f0f0f0;
@@ -134,9 +144,9 @@
 			    background-color: var(--primary-color);
 			    color: var(--white);
 			    text-align: center;
-			    padding: 1.25rem;
-			    max-width: 90%;
-			    margin: 2rem auto;
+			    padding: 1.25rem;  /* Ensuring the same padding style */
+			    max-width: 90%;   /* Ensuring same width */
+			    margin: 2rem auto;  /* Ensuring same margin */
 			    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 			    border-radius: 10px;
 			    background-color: var(--primary-color);
@@ -197,15 +207,12 @@
 			    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 			}
 			.dark-mode header a{
-			    color: var(--link-color);
+			    color: var(--header-link-color);
 			    transition: color 0.3s;
 			}
 			.dark-mode a{
-			    color: var(--link-color);
+			    color: var(--white);
 			    transition: color 0.3s;
-			}
-			.dark-mode a:hover{
-			    color: #82afff;
 			}
 			.dark-mode p1 {
 			    color: var(--text-color);
@@ -213,7 +220,7 @@
 			}
 			.dark-mode header a:hover {
 			    background-color: #1E88E5;
-			    color: var(--link-color);
+			    color: #ffffff;
 			}
 			.dark-mode h1, .dark-mode h2, .dark-mode h3 {
 			    color: var(--secondary-color);
