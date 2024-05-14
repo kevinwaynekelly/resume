@@ -11,11 +11,12 @@
 		<meta property="og:image:secure_url" content="https://drive.google.com/uc?id=17Cumo7JOvKyaskxsAXEjVNaJ3LA3TThd" />
 		<meta property="og:image:type" content="image/jpeg" />
 		<meta property="og:image:width" content="1448" />
-                <meta property="og:image:height" content="1448" />
+		<meta property="og:image:height" content="1448" />
 		<meta property="og:description" content="Kevin Kelly's professional portfolio as an Electrical & Computer Engineer with a comprehensive background in both hardware and software engineering." />
 		<meta property="og:site_name" content="Kevin Kelly's Portfolio" />
 		<meta name="description" content="Kevin Kelly's professional portfolio as an Electrical & Computer Engineer with a comprehensive background in both hardware and software engineering." />
 		<meta name="keywords" content="Kevin Kelly, Electrical Engineer, Computer Engineer, Portfolio" />
+		<meta name="author" content="Kevin Kelly"/>
 		<title>Kevin Kelly - Electrical & Computer Engineer</title>
 		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
@@ -23,44 +24,64 @@
 		<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
 		<style>
+			:root {
+			    --primary-color: #003366;
+			    --secondary-color: #0055a5;
+			    --text-color: #333;
+			    --background-color: #f7f7f7;
+			    --white: #fff;
+			    --link-color: black;
+			}
+
+			.dark-mode {
+			    --primary-color: #1E1E1E;
+			    --secondary-color: #64B5F6;
+			    --text-color: #E0E0E0;
+			    --background-color: #121212;
+			    --link-color: white;
+			}
+
 			body {
 			    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 			    margin: 0;
 			    padding: 0;
-			    color: #333;
-			    background-color: #f7f7f7;
+			    color: var(--text-color);
+			    background-color: var(--background-color);
 			    line-height: 1.6;
 			    font-size: 100%;
 			}
 			header, section, footer, .code-container {
-			    margin: 30px auto;
-			    padding: 20px;
-			    max-width: 960px;
+			    margin: 2rem auto;
+			    padding: 1.25rem;
+			    max-width: 90%;
 			    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 			    border-radius: 10px;
-			    background-color: white;
+			    background-color: var(--white);
 			}
 			header {
-			    background-color: #003366;
-			    color: white;
+			    display: flex;
+			    justify-content: space-between;
+			    align-items: center;
+			    background-color: var(--primary-color);
+			    color: var(--white);
 			}
 			header a {
-			    color: black;
-			    background-color: white;
+			    color: var(--link-color);
+			    background-color: var(--white);
 			    padding: 5px 10px;
 			    border-radius: 5px;
 			    text-decoration: none;
 			    transition: background-color 0.3s, color 0.3s;
 			}
 			header a:hover {
-			    background-color: #0055a5;
+			    background-color: var(--secondary-color);
 			    color: #f0f0f0;
 			}
 			header p {
 			    font-size: 1.2em;
 			}
-			section {
-			    background-color: white;
+			section, .code-container {
+			    background-color: var(--white);
 			}
 			h1, h2, h3, .sub-info, a {
 			    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -70,11 +91,11 @@
 			    font-size: 2.25rem;
 			    font-weight: bold;
 			    letter-spacing: -1px;
-			    color: white;
+			    color: var(--white);
 			}
 			h2 {
-			    border-bottom: 4px solid #003366;
-			    color: #003366;
+			    border-bottom: 4px solid var(--primary-color);
+			    color: var(--primary-color);
 			    padding-bottom: 10px;
 			    margin-top: 5px;
 			    margin-bottom: 20px;
@@ -82,7 +103,7 @@
 			    font-weight: bold;
 			}
 			h3 {
-			    color: #0055a5;
+			    color: var(--secondary-color);
 			    font-size: 1.5rem;
 			    font-weight: 500;
 			    margin-bottom: 5px;
@@ -100,13 +121,18 @@
 			a {
 			    font-size: 1.0625rem;
 			    margin-top: 0px;
+			    color: var(--link-color);
+			    text-decoration: none;
+			}
+			a:hover {
+			    color: #82afff;
 			}
 			footer p {
 			    margin-top: 10px;
 			}
 			footer {
-			    background-color: #003366;
-			    color: white;
+			    background-color: var(--primary-color);
+			    color: var(--white);
 			    text-align: center;
 			    padding: 10px;
 			}
@@ -157,24 +183,24 @@
 			    }
 			}
 			.dark-mode {
-			    background-color: #121212;
-			    color: #E0E0E0;
+			    background-color: var(--background-color);
+			    color: var(--text-color);
 			}
 			.dark-mode header, .dark-mode section, .dark-mode footer, .dark-mode .code-container {
-			    background-color: #1E1E1E;
-			    color: #E0E0E0;
+			    background-color: var(--primary-color);
+			    color: var(--text-color);
 			    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 			}
 			.dark-mode header a{
-			    color: #000000;
+			    color: var(--link-color);
 			    transition: color 0.3s;
 			}
 			.dark-mode a{
-			    color: #E0E0E0;
+			    color: var(--white);
 			    transition: color 0.3s;
 			}
 			.dark-mode p1 {
-			    color: #E0E0E0;
+			    color: var(--text-color);
 			    line-height: 1.4;
 			}
 			.dark-mode header a:hover {
@@ -182,7 +208,7 @@
 			    color: #ffffff;
 			}
 			.dark-mode h1, .dark-mode h2, .dark-mode h3 {
-			    color: #64B5F6;
+			    color: var(--secondary-color);
 			}
 			.dark-mode h2 {
 			    border-bottom: 2px solid #1E88E5;
@@ -194,8 +220,8 @@
 			    font-family: 'Segoe UI', Arial, sans-serif;
 			    font-size: 16px;
 			    padding: 10px 20px;
-			    background-color: #ffffff;
-			    color: #003366;
+			    background-color: var(--white);
+			    color: var(--primary-color);
 			    border: none;
 			    border-radius: 5px;
 			    cursor: pointer;
@@ -217,7 +243,7 @@
 			}
 			.dark-mode input, .dark-mode select, .dark-mode textarea {
 			    background-color: #333333;
-			    color: #E0E0E0;
+			    color: var(--text-color);
 			    border: 1px solid #444444;
 			}
 
@@ -227,24 +253,6 @@
 
 			.reference-item p {
 			    line-height: 1.6;
-			}
-
-			.reference-item a {
-			    color: #000000;
-			    text-decoration: none;
-			}
-
-			.dark-mode .reference-item a {
-			    color: #ffffff;
-			    text-decoration: none;
-			}
-
-			.reference-item a:hover {
-			    color: #82afff;
-			}
-
-			.dark-mode .reference-item a:hover {
-			    color: #82afff;
 			}
 
 			@media (max-width: 768px) {
@@ -263,12 +271,12 @@
 	</head>
 	<body>
 		<div class="code-container">
-			<header style="display: flex; justify-content: space-between; align-items: center;">
+			<header>
 				<div>
 					<h1>Kevin Kelly</h1>
 					<p>Electrical & Computer Engineer</p>
 					<p>San Antonio, Texas, United States 78222</p>
-					<button id="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+					<button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">Switch to Dark Mode</button>
 				</div>
 				<nav>
 					<p>Email: <a href="mailto:kevinwaynekelly@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Kevin Kelly">kevinwaynekelly@gmail.com</a></p>
@@ -277,7 +285,7 @@
 				</nav>
 			</header>
 			<main>
-				<section>
+				<section id="professional-summary">
 					<h2>Professional Summary</h2>
 					<p>
 						As a University of Texas at Austin graduate, I possess a solid foundation in hardware and software engineering, with expertise in low-level programming languages like x86 and ARM Assembly, and high-level languages
@@ -286,10 +294,8 @@
 						expertise to solve challenging problems and contribute to a culture of collaboration and innovation, fostering personal and professional growth.
 					</p>
 				</section>
-				<!-- Section showcasing projects -->
-				<section>
+				<section id="projects">
 					<h2>Projects</h2>
-					<!-- Article for each project -->
 					<article>
 						<h3>Formal Circuit Verification Algorithm</h3>
 						<p class="sub-info">Sponsored by Cadence Design Systems Inc.</p>
@@ -347,7 +353,7 @@
 						</p>
 					</article>
 				</section>
-				<section>
+				<section id="employment-history">
 					<h2>Employment History</h2>
 					<article>
 						<h3>Audio Video Student Supervisor</h3>
@@ -370,41 +376,36 @@
 						<h3>Audio Video Student Operator</h3>
 						<p class="sub-info">The University of Texas at Austin, Austin, TX — Feb 2020 - Aug 2023</p>
 						<p>
-							I was actively involved in providing Live Sound services for clients across the entire Texas Union, entailing direct interaction with clients to fulfill their specific needs and immediate execution of those
-							requirements. This role demanded a thorough understanding of the venue's technological capabilities and equipment. Additionally, the coordination between team members and clients was essential for precisely
-							meeting and executing the event's requirements.
+							I was actively involved in providing Live Sound services for clients across the entire Texas Union, entailing direct interaction with clients to fulfill their specific needs and ```html
+							immediate execution of those requirements. This role demanded a thorough understanding of the venue's technological capabilities and equipment. Additionally, the coordination between team members and clients was essential for precisely meeting and executing the event's requirements.
 						</p>
 					</article>
 					<article>
 						<h3>Audio Video Assistant</h3>
 						<p class="sub-info">The University of Texas at Austin, Austin, TX — Sep 2019 - Sep 2021</p>
 						<p>
-							I supported the realization of the event's vision and implemented decisions as directed by the stage manager. This included contributing suggestions for enhancements to elevate the event's quality and seeking
-							clarification to ensure tasks were completed accurately and in alignment with the intended outcome.
+							I supported the realization of the event's vision and implemented decisions as directed by the stage manager. This included contributing suggestions for enhancements to elevate the event's quality and seeking clarification to ensure tasks were completed accurately and in alignment with the intended outcome.
 						</p>
 					</article>
 					<article>
 						<h3>Information Technology Intern</h3>
 						<p class="sub-info">East Central Independent School District, San Antonio, TX — May 2018 - Aug 2018</p>
 						<p>
-							I specialized in repairing a wide array of school equipment, including replacing parts in laptops and desktop computers vital for the technological operations within the school district. Additionally, I gained
-							expertise in deploying new hardware and configuring it for use by employees and students.
+							I specialized in repairing a wide array of school equipment, including replacing parts in laptops and desktop computers vital for the technological operations within the school district. Additionally, I gained expertise in deploying new hardware and configuring it for use by employees and students.
 						</p>
 					</article>
 				</section>
-				<section>
+				<section id="education">
 					<h2>Education</h2>
 					<article>
 						<h3>Bachelor of Science in Electrical Engineering</h3>
 						<p class="sub-info">The University of Texas at Austin, Austin, TX — Aug 2019 - May 2023</p>
 						<p>
-							During my time at the University of Texas at Austin, my education focused on developing strong skills in communication, testing, and iterative development, providing a solid foundation for my engineering career.
-							This also provided me with years of professional experience in programming languages from binary to assembly to higher-level languages such as x86 Assembly, ARM Assembly, Java, Python, HTML, C++, C, JavaScript,
-							and SQL.
+							During my time at the University of Texas at Austin, my education focused on developing strong skills in communication, testing, and iterative development, providing a solid foundation for my engineering career. This also provided me with years of professional experience in programming languages from binary to assembly to higher-level languages such as x86 Assembly, ARM Assembly, Java, Python, HTML, C++, C, JavaScript, and SQL.
 						</p>
 					</article>
 				</section>
-				<section>
+				<section id="skills">
 					<h2>Skills</h2>
 					<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
 						<div>
@@ -425,7 +426,7 @@
 						</div>
 					</div>
 				</section>
-				<section>
+				<section id="references">
 					<h2>References</h2>
 					<p>The following are references who can attest to my professional qualifications and work experience:</p>
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -458,11 +459,19 @@
 
 			    if (body.classList.contains('dark-mode')) {
 			        themeToggleButton.textContent = 'Switch to Light Mode';
+			        localStorage.setItem('theme', 'dark');
 			    } else {
 			        themeToggleButton.textContent = 'Switch to Dark Mode';
+			        localStorage.setItem('theme', 'light');
 			    }
 			}
+
+			document.addEventListener('DOMContentLoaded', (event) => {
+			    if (localStorage.getItem('theme') === 'dark') {
+			        document.body.classList.add('dark-mode');
+			        document.getElementById('theme-toggle').textContent = 'Switch to Light Mode';
+			    }
+			});
 		</script>
 	</body>
 </html>
-<!-- /wp:html -->
