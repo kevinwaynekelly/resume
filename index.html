@@ -349,7 +349,7 @@
     </style>
 </head>
 <body>
-    <div class="code-container">
+    <div class="container">
         <header>
             <div>
                 <h1>Kevin Kelly</h1>
@@ -487,12 +487,12 @@
         document.addEventListener('DOMContentLoaded', () => {
             const body = document.body;
             const themeToggleButton = document.getElementById('theme-toggle');
-            
+
             if (localStorage.getItem('theme') === 'dark') {
                 body.classList.add('dark-mode');
                 themeToggleButton.textContent = 'Switch to Light Mode';
             }
-            
+
             themeToggleButton.addEventListener('click', () => {
                 body.classList.toggle('dark-mode');
                 const isDarkMode = body.classList.contains('dark-mode');
