@@ -35,7 +35,7 @@
             --link-hover-color: #82afff;
             --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             --max-width: 1200px;
-            --container-padding: 40px;
+            --container-padding: 15px;
         }
 
         .dark-mode {
@@ -44,7 +44,7 @@
             --text-color: #E0E0E0;
             --background-color: #121212;
             --link-color: white;
-            --header-link-color: white;
+            --header-link-color: black;
         }
 
         body {
@@ -66,8 +66,12 @@
             background-color: var(--white);
         }
 
-        header, section, footer {
+        header, section, footer, .code-container {
+            margin: 2rem auto;
             padding: 1.25rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: var(--white);
         }
 
         header {
@@ -104,12 +108,8 @@
             font-size: 1.2em;
         }
 
-        section {
+        section, .code-container {
             background-color: var(--white);
-        }
-
-        .dark-mode section, .dark-mode footer {
-            background-color: var(--primary-color);
         }
 
         h1, h2, h3, .sub-info, a {
@@ -134,10 +134,6 @@
             font-weight: bold;
         }
 
-        .dark-mode h2 {
-            border-bottom: 4px solid var(--secondary-color);
-        }
-
         h3 {
             color: var(--secondary-color);
             font-size: 1.5rem;
@@ -145,19 +141,11 @@
             margin-bottom: 5px;
         }
 
-        .dark-mode h3 {
-            color: var(--secondary-color);
-        }
-
         .sub-info {
             margin-top: 7px;
             font-style: italic;
             color: #555;
             font-size: 16px;
-        }
-
-        .dark-mode .sub-info {
-            color: #999;
         }
 
         p {
@@ -170,10 +158,6 @@
             margin-top: 0px;
             color: var(--link-color);
             text-decoration: none;
-        }
-
-        .dark-mode a {
-            color: var(--link-color);
         }
 
         a:hover {
@@ -200,13 +184,9 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            header, section, footer {
+            header, section, footer, .code-container {
                 margin: 15px;
-                padding: 20px;
+                padding: 10px;
             }
 
             h1, h3 {
@@ -231,13 +211,9 @@
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 20px;
-            }
-
-            header, section, footer {
-                margin: 20px;
-                padding: 20px;
+            header, section, footer, .code-container {
+                margin: 10px 5px;
+                padding: 10px;
             }
 
             h1, h3 {
@@ -266,7 +242,7 @@
             color: var(--text-color);
         }
 
-        .dark-mode header, .dark-mode section, .dark-mode footer {
+        .dark-mode header, .dark-mode section, .dark-mode footer, .dark-mode .code-container {
             background-color: var(--primary-color);
             color: var(--text-color);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -278,7 +254,7 @@
         }
 
         .dark-mode a {
-            color: var(--link-color);
+            color: var(--white);
             transition: color 0.3s;
         }
 
