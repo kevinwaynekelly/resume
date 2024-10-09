@@ -50,7 +50,7 @@
             --container-padding: 15px;
             --transition-duration: 0.3s;
         }
-
+    
         .dark-mode {
             --primary-color: #1E1E1E;
             --secondary-color: #64B5F6;
@@ -59,7 +59,7 @@
             --link-color: white;
             --header-link-color: black;
         }
-
+    
         body {
             font-family: var(--font-family);
             margin: 0;
@@ -70,7 +70,7 @@
             font-size: 100%;
             transition: background-color var(--transition-duration), color var(--transition-duration);
         }
-        
+
         header, section, footer {
             margin: 2rem auto;
             padding: 1.25rem;
@@ -216,6 +216,11 @@
             border-radius: 10px;
             background-color: var(--white);
             max-width: var(--max-width);
+        }
+    
+        .dark-mode .code-container {
+            background-color: var(--primary-color); /* Dark mode background */
+            color: var(--text-color); /* Text color to ensure readability */
         }
 
         section {
