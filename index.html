@@ -50,7 +50,7 @@
             --container-padding: 15px;
             --transition-duration: 0.3s;
         }
-    
+
         .dark-mode {
             --primary-color: #1E1E1E;
             --secondary-color: #64B5F6;
@@ -59,7 +59,7 @@
             --link-color: white;
             --header-link-color: black;
         }
-    
+
         body {
             font-family: var(--font-family);
             margin: 0;
@@ -71,21 +71,33 @@
             transition: background-color var(--transition-duration), color var(--transition-duration);
         }
 
+        h2 {
+            border-bottom: 4px solid var(--primary-color); /* Thick bottom border */
+            color: var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+
+        .dark-mode h2 {
+            border-bottom: 4px solid #1E88E5; /* Same thickness in dark mode */
+        }
+
         header, section, footer {
             margin: 2rem auto;
             padding: 1.25rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Consistent shadow */
             border-radius: 10px;
             background-color: var(--white);
             transition: background-color var(--transition-duration), color var(--transition-duration);
         }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        .dark-mode header, .dark-mode section, .dark-mode footer {
             background-color: var(--primary-color);
-            color: var(--white);
+            color: var(--text-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Consistent shadow thickness */
         }
 
         header a {
@@ -100,6 +112,16 @@
         header a:hover {
             background-color: var(--secondary-color);
             color: #f0f0f0;
+        }
+
+        .dark-mode header a {
+            color: black; /* Set header links to black in dark mode */
+            background-color: var(--white);
+        }
+
+        .dark-mode header a:hover {
+            background-color: #1E88E5;
+            color: #ffffff;
         }
 
         #theme-toggle {
@@ -131,13 +153,7 @@
             background-color: #0D47A1;
         }
 
-        .dark-mode header, .dark-mode section, .dark-mode footer {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        h1, h2, h3, .sub-info, a {
+        h1, h3, .sub-info, a {
             font-family: var(--font-family);
         }
 
@@ -147,16 +163,6 @@
             font-weight: bold;
             letter-spacing: -1px;
             color: var(--white);
-        }
-
-        h2 {
-            border-bottom: 4px solid var(--primary-color);
-            color: var(--primary-color);
-            padding-bottom: 10px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            font-size: 1.75rem;
-            font-weight: bold;
         }
 
         h3 {
@@ -217,7 +223,7 @@
             background-color: var(--white);
             max-width: var(--max-width);
         }
-    
+
         .dark-mode .code-container {
             background-color: var(--primary-color); /* Dark mode background */
             color: var(--text-color); /* Text color to ensure readability */
@@ -304,28 +310,22 @@
             color: var(--white);
             transition: color var(--transition-duration);
         }
-        
-        header a:hover {
-            background-color: var(--secondary-color);
-            color: #f0f0f0;
+
+        .dark-mode a:hover {
+            color: var(--link-hover-color);
         }
 
-        .dark-mode header a {
-            color: black; /* Set header links to black in dark mode */
-            background-color: var(--white); /* Ensure the background remains white */
-        }
-        
         .dark-mode header a:hover {
             background-color: #1E88E5;
             color: #ffffff;
         }
 
-        .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+        .dark-mode h1, .dark-mode h3 {
             color: var(--secondary-color);
         }
 
         .dark-mode h2 {
-            border-bottom: 2px solid #1E88E5;
+            border-bottom: 4px solid #1E88E5; /* Ensure consistent line thickness */
         }
 
         .dark-mode .sub-info {
