@@ -6,6 +6,8 @@
     <meta name="description" content="Kevin Kelly's professional portfolio showcasing expertise in electrical and computer engineering, including hardware and software projects, employment history, and education.">
     <meta name="keywords" content="Kevin Kelly, Electrical Engineer, Computer Engineer, hardware engineering, software engineering, projects, employment history, education, portfolio">
     <meta name="author" content="Kevin Kelly">
+
+    <!-- OpenGraph Meta Tags for sharing -->
     <meta property="og:title" content="Kevin Kelly - Electrical & Computer Engineer">
     <meta property="og:description" content="Kevin Kelly's professional portfolio showcasing his comprehensive background in hardware and software engineering.">
     <meta property="og:image" content="https://drive.google.com/uc?id=17Cumo7JOvKyaskxsAXEjVNaJ3LA3TThd">
@@ -17,12 +19,22 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Kevin Kelly's Portfolio">
+
+    <!-- Twitter Card Meta Tags for sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kevin Kelly - Electrical & Computer Engineer">
+    <meta name="twitter:description" content="Showcasing expertise in electrical and computer engineering, including hardware and software projects, employment history, and education.">
+    <meta name="twitter:image" content="https://drive.google.com/uc?id=17Cumo7JOvKyaskxsAXEjVNaJ3LA3TThd">
+
     <title>Kevin Kelly - Electrical & Computer Engineer</title>
+    
+    <!-- Favicon and Touch Icons -->
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
     <style>
         :root {
             --primary-color: #003366;
@@ -34,8 +46,9 @@
             --header-link-color: black;
             --link-hover-color: #82afff;
             --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-	    --max-width: 1200px;
+            --max-width: 1200px;
             --container-padding: 15px;
+            --transition-duration: 0.3s;
         }
 
         .dark-mode {
@@ -55,22 +68,18 @@
             background-color: var(--background-color);
             line-height: 1.6;
             font-size: 100%;
+            transition: background-color var(--transition-duration), color var(--transition-duration);
         }
+        
         header, section, footer {
             margin: 2rem auto;
             padding: 1.25rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             background-color: var(--white);
+            transition: background-color var(--transition-duration), color var(--transition-duration);
         }
-	.code-container {
-	    margin: 2rem auto;
-	    padding: 1rem 2.5rem;
-	    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	    border-radius: 10px;
-	    background-color: var(--white);
-	    max-width: var(--max-width);
-	}
+        
         header {
             display: flex;
             justify-content: space-between;
@@ -78,38 +87,60 @@
             background-color: var(--primary-color);
             color: var(--white);
         }
+
         header a {
             color: var(--link-color);
             background-color: var(--white);
             padding: 5px 10px;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        header p > a {
-            color: var(--link-color);
-        }
-
-        .dark-mode header a, .dark-mode header p > a {
-            color: var(--header-link-color);
+            transition: background-color var(--transition-duration), color var(--transition-duration);
         }
 
         header a:hover {
             background-color: var(--secondary-color);
             color: #f0f0f0;
         }
-        header p {
-            font-size: 1.2em;
-        }
-        section {
+
+        #theme-toggle {
+            font-family: var(--font-family);
+            font-size: 16px;
+            padding: 10px 20px;
             background-color: var(--white);
-	    max-width: var(--max-width);
-            padding: var(--container-padding);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color var(--transition-duration), color var(--transition-duration), box-shadow var(--transition-duration);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
+        #theme-toggle:hover {
+            background-color: #00457C;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode #theme-toggle {
+            background-color: #1E88E5;
+            color: #ffffff;
+        }
+
+        .dark-mode #theme-toggle:hover {
+            background-color: #0D47A1;
+        }
+
+        .dark-mode header, .dark-mode section, .dark-mode footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
         h1, h2, h3, .sub-info, a {
             font-family: var(--font-family);
         }
+
         h1 {
             margin: 0;
             font-size: 2.25rem;
@@ -117,6 +148,7 @@
             letter-spacing: -1px;
             color: var(--white);
         }
+
         h2 {
             border-bottom: 4px solid var(--primary-color);
             color: var(--primary-color);
@@ -126,34 +158,41 @@
             font-size: 1.75rem;
             font-weight: bold;
         }
+
         h3 {
             color: var(--secondary-color);
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 5px;
         }
+
         .sub-info {
             margin-top: 7px;
             font-style: italic;
             color: #555;
             font-size: 16px;
         }
+
         p {
             font-size: 1.0625rem;
             margin-top: 0px;
         }
+
         a {
             font-size: 1.0625rem;
             margin-top: 0px;
             color: var(--link-color);
             text-decoration: none;
         }
+
         a:hover {
             color: var(--link-hover-color);
         }
+
         footer p {
             margin-top: 10px;
         }
+
         footer {
             background-color: var(--primary-color);
             color: var(--white);
@@ -164,118 +203,79 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
+
         li {
             font-size: 1.0625rem;
             padding-bottom: 5px;
         }
+
+        .code-container {
+            margin: 2rem auto;
+            padding: 1rem 2.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: var(--white);
+            max-width: var(--max-width);
+        }
+
+        section {
+            background-color: var(--white);
+            max-width: var(--max-width);
+            padding: var(--container-padding);
+        }
+
         @media (max-width: 768px) {
             header, section, footer, .code-container {
                 margin: 15px;
                 padding: 10px;
             }
+
             h1, h3 {
                 font-size: 1.5em;
             }
+
             header p, header a, p1, a {
                 font-size: 0.7em;
             }
+
             p, li, .reference-item p {
                 font-size: 0.9em;
             }
+
             .reference-item a {
                 font-size: 1.0em;
             }
+
             #theme-toggle {
                 font-size: 0.7em;
             }
         }
+
         @media (max-width: 480px) {
             header, section, footer, .code-container {
                 margin: 10px 5px;
                 padding: 10px;
             }
+
             h1, h3 {
                 font-size: 1.2em;
             }
+
             header p, header a, p1, a {
                 font-size: 0.6em;
             }
+
             p, li, .reference-item p {
                 font-size: 0.8em;
             }
+
             .reference-item a {
                 font-size: 1.0em;
             }
+
             #theme-toggle {
                 font-size: 0.6em;
             }
-        }
-        .dark-mode {
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-        .dark-mode header, .dark-mode section, .dark-mode footer, .dark-mode .code-container {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        }
-        .dark-mode header a, .dark-mode header p > a {
-            color: var(--header-link-color);
-            transition: color 0.3s;
-        }
-        .dark-mode a {
-            color: var(--white);
-            transition: color 0.3s;
-        }
-        .dark-mode p1 {
-            color: var(--text-color);
-            line-height: 1.4;
-        }
-        .dark-mode a:hover {
-            color: var(--link-hover-color);
-        }
-        .dark-mode header a:hover {
-            background-color: #1E88E5;
-            color: #ffffff;
-        }
-        .dark-mode h1, .dark-mode h2, .dark-mode h3 {
-            color: var(--secondary-color);
-        }
-        .dark-mode h2 {
-            border-bottom: 2px solid #1E88E5;
-        }
-        .dark-mode .sub-info {
-            color: #90CAF9;
-        }
-        #theme-toggle {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            font-size: 16px;
-            padding: 10px 20px;
-            background-color: var(--white);
-            color: var(--primary-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            outline: none;
-            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        #theme-toggle:hover {
-            background-color: #00457C;
-            color: #ffffff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        .dark-mode #theme-toggle {
-            background-color: #1E88E5;
-            color: #ffffff;
-        }
-        .dark-mode #theme-toggle:hover {
-            background-color: #0D47A1;
-        }
-        .dark-mode input, .dark-mode select, .dark-mode textarea {
-            background-color: #333333;
-            color: var(--text-color);
-            border: 1px solid #444444;
         }
 
         .reference-item h3, .reference-item p {
@@ -295,17 +295,30 @@
             color: var(--link-hover-color);
         }
 
-        @media (max-width: 768px) {
-            #theme-toggle {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
+        .dark-mode a {
+            color: var(--white);
+            transition: color var(--transition-duration);
         }
-        @media (max-width: 480px) {
-            #theme-toggle {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
+
+        .dark-mode a:hover {
+            color: var(--link-hover-color);
+        }
+
+        .dark-mode header a:hover {
+            background-color: #1E88E5;
+            color: #ffffff;
+        }
+
+        .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+            color: var(--secondary-color);
+        }
+
+        .dark-mode h2 {
+            border-bottom: 2px solid #1E88E5;
+        }
+
+        .dark-mode .sub-info {
+            color: #90CAF9;
         }
     </style>
 </head>
@@ -327,7 +340,7 @@
         <main>
             <section id="professional-summary">
                 <h2>Professional Summary</h2>
-		<p>As a University of Texas at Austin graduate, I possess a solid foundation in hardware and software engineering, with expertise in low-level programming languages like x86 and ARM Assembly, and high-level languages such as Java, Python, HTML, C++, C, JavaScript, and SQL. My skills extend to designing, configuring, and deploying hardware systems, and I am well-versed in Agile and Waterfall methodologies. I am driven by the challenges of solving complex problems and innovating, with a keen eye on technological trends to implement new technologies or methods effectively. Eager to join a team of proficient engineers, I aim to apply my expertise to solve challenging problems and contribute to a culture of collaboration and innovation, fostering personal and professional growth.</p>
+                <p>As a University of Texas at Austin graduate, I possess a solid foundation in hardware and software engineering, with expertise in low-level programming languages like x86 and ARM Assembly, and high-level languages such as Java, Python, HTML, C++, C, JavaScript, and SQL. My skills extend to designing, configuring, and deploying hardware systems, and I am well-versed in Agile and Waterfall methodologies. I am driven by the challenges of solving complex problems and innovating, with a keen eye on technological trends to implement new technologies or methods effectively. Eager to join a team of proficient engineers, I aim to apply my expertise to solve challenging problems and contribute to a culture of collaboration and innovation, fostering personal and professional growth.</p>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
@@ -444,6 +457,7 @@
             <p>&copy; 2024 Kevin Kelly. All rights reserved.</p>
         </footer>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const body = document.body;
