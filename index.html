@@ -304,11 +304,17 @@
             color: var(--white);
             transition: color var(--transition-duration);
         }
-
-        .dark-mode a:hover {
-            color: var(--link-hover-color);
+        
+        header a:hover {
+            background-color: var(--secondary-color);
+            color: #f0f0f0;
         }
 
+        .dark-mode header a {
+            color: black; /* Set header links to black in dark mode */
+            background-color: var(--white); /* Ensure the background remains white */
+        }
+        
         .dark-mode header a:hover {
             background-color: #1E88E5;
             color: #ffffff;
