@@ -26,6 +26,9 @@
     <meta name="twitter:description" content="Showcasing expertise in electrical and computer engineering, including hardware and software projects, employment history, and education.">
     <meta name="twitter:image" content="https://drive.google.com/uc?id=17Cumo7JOvKyaskxsAXEjVNaJ3LA3TThd">
 
+    <!-- Include Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <title>Kevin Kelly - Electrical & Computer Engineer</title>
     
     <!-- Favicon and Touch Icons -->
@@ -80,13 +83,16 @@
             transition: background-color var(--transition-duration), color var(--transition-duration);
         }
         
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
+		/* Add padding to the header for all screen sizes */
+		header {
+			padding: 20px;  /* Add padding to all sides */
+			background-color: var(--primary-color);
+			color: var(--white);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: 10px;
+		}
 
         header a {
             color: var(--link-color);
@@ -194,14 +200,24 @@
         }
 
         footer {
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: var(--primary-color); /* Remove gradient */
+            color: #fff;
             text-align: center;
-            padding: 1.25rem;
+            padding: 1.5rem;
             max-width: var(--max-width);
             margin: 2rem auto;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
             border-radius: 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #FFD700;
         }
 
         li {
@@ -219,15 +235,122 @@
         }
     
         .dark-mode .code-container {
-            background-color: var(--primary-color); /* Dark mode background */
-            color: var(--text-color); /* Text color to ensure readability */
+            background-color: var(--primary-color);
+            color: var(--text-color);
         }
 
         section {
             background-color: var(--white);
             max-width: var(--max-width);
             padding: var(--container-padding);
+            animation: fadeIn 0.8s ease-out;
         }
+
+        /* Always stack header icons vertically */
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align the icons */
+        }
+
+		/* Fine-tune container size and icon alignment */
+		nav a {
+			margin-bottom: 8px;  /* Slightly reduce the margin between icons */
+			width: 45px;  /* Reduce the container width */
+			height: 45px; /* Reduce the container height */
+			display: flex;
+			align-items: center;  /* Center the icons vertically */
+			justify-content: center; /* Center the icons horizontally */
+			background-color: var(--white);
+			border-radius: 8px;  /* Adjust corners for a smoother look */
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+
+		nav a i {
+			font-size: 1.2em;  /* Adjust icon size for a better fit */
+			color: var(--primary-color);
+		}
+
+		.nav i.fa {
+			width: 1.25em; /* Ensure fixed-width icons have a uniform width */
+		}
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        nav a:hover i {
+            color: #fff;
+        }
+
+        /* Updated animation for section title icons */
+        h2 i {
+            margin-right: 10px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        h2:hover i {
+            transform: scale(1.1);
+            color: var(--secondary-color);
+        }
+
+        /* Button pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        /* Apply pulse effect on click */
+        #theme-toggle:active {
+            animation: pulse 0.4s ease-out;
+        }
+
+        /* Fade-in animation for sections */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth transition for dark mode */
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .dark-mode header, .dark-mode section, .dark-mode footer {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Ensure title and borders are visible in dark mode */
+        .dark-mode h2 {
+            color: var(--secondary-color); /* Make title color brighter */
+            border-bottom: 4px solid var(--secondary-color); /* Adjust border color */
+        }
+
+        .dark-mode h3 {
+            color: var(--secondary-color); /* Ensure that h3 is also bright */
+        }
+
+        .dark-mode .sub-info {
+            color: #90CAF9; /* Ensure sub-info is visible in dark mode */
+        }
+		
 
         @media (max-width: 768px) {
             header, section, footer, .code-container {
@@ -240,7 +363,7 @@
             }
 
             header p, header a, p1, a {
-                font-size: 0.7em;
+                font-size: 1.1em;
             }
 
             p, li, .reference-item p {
@@ -267,7 +390,7 @@
             }
 
             header p, header a, p1, a {
-                font-size: 0.6em;
+                font-size: 1.0em;
             }
 
             p, li, .reference-item p {
@@ -282,55 +405,6 @@
                 font-size: 0.6em;
             }
         }
-
-        .reference-item h3, .reference-item p {
-            margin: 5px 0;
-        }
-
-        .reference-item p {
-            line-height: 1.6;
-        }
-
-        .reference-item a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        .reference-item a:hover {
-            color: var(--link-hover-color);
-        }
-
-        .dark-mode a {
-            color: var(--white);
-            transition: color var(--transition-duration);
-        }
-        
-        header a:hover {
-            background-color: var(--secondary-color);
-            color: #f0f0f0;
-        }
-
-        .dark-mode header a {
-            color: black; /* Set header links to black in dark mode */
-            background-color: var(--white); /* Ensure the background remains white */
-        }
-        
-        .dark-mode header a:hover {
-            background-color: #1E88E5;
-            color: #ffffff;
-        }
-
-        .dark-mode h1, .dark-mode h2, .dark-mode h3 {
-            color: var(--secondary-color);
-        }
-
-        .dark-mode h2 {
-            border-bottom: 4px solid #1E88E5;
-        }
-
-        .dark-mode .sub-info {
-            color: #90CAF9;
-        }
     </style>
 </head>
 <body>
@@ -343,18 +417,18 @@
                 <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">Switch to Dark Mode</button>
             </div>
             <nav>
-                <p>Email: <a href="mailto:kevinwaynekelly@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Kevin Kelly">kevinwaynekelly@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/kevinwaynekelly/" target="_blank" rel="noopener noreferrer" aria-label="Visit Kevin's LinkedIn">www.linkedin.com</a></p>
-                <p>Resume: <a href="https://drive.google.com/file/d/1faYerKmWyI8Eoqr0KWyKHTJrBnSuG9i8/view" target="_blank" rel="noopener noreferrer" aria-label="View Kevin's Resume">Executive Summary</a></p>
+                <p><a href="mailto:kevinwaynekelly@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Kevin Kelly"><i class="fas fa-envelope"></i></a></p>
+                <p><a href="https://www.linkedin.com/in/kevinwaynekelly/" target="_blank" rel="noopener noreferrer" aria-label="Visit Kevin's LinkedIn"><i class="fab fa-linkedin"></i></a></p>
+                <p><a href="https://drive.google.com/file/d/1faYerKmWyI8Eoqr0KWyKHTJrBnSuG9i8/view" target="_blank" rel="noopener noreferrer" aria-label="View Kevin's Resume"><i class="fas fa-file-pdf"></i></a></p>
             </nav>
         </header>
         <main>
             <section id="professional-summary">
-                <h2>Professional Summary</h2>
+                <h2><i class="fas fa-user"></i> Professional Summary</h2>
                 <p>As a University of Texas at Austin graduate, I possess a solid foundation in hardware and software engineering, with expertise in low-level programming languages like x86 and ARM Assembly, and high-level languages such as Java, Python, HTML, C++, C, JavaScript, and SQL. My skills extend to designing, configuring, and deploying hardware systems, and I am well-versed in Agile and Waterfall methodologies. I am driven by the challenges of solving complex problems and innovating, with a keen eye on technological trends to implement new technologies or methods effectively. Eager to join a team of proficient engineers, I aim to apply my expertise to solve challenging problems and contribute to a culture of collaboration and innovation, fostering personal and professional growth.</p>
             </section>
             <section id="projects">
-                <h2>Projects</h2>
+                <h2><i class="fas fa-tasks"></i> Projects</h2>
                 <article>
                     <h3>Formal Circuit Verification Algorithm</h3>
                     <p class="sub-info">Sponsored by Cadence Design Systems Inc.</p>
@@ -387,7 +461,7 @@
                 </article>
             </section>
             <section id="employment-history">
-                <h2>Employment History</h2>
+                <h2><i class="fas fa-briefcase"></i> Employment History</h2>
                 <article>
                     <h3>Audio Video Student Supervisor</h3>
                     <p class="sub-info">The University of Texas at Austin, Austin, TX — Sep 2021 - Aug 2023</p>
@@ -415,7 +489,7 @@
                 </article>
             </section>
             <section id="education">
-                <h2>Education</h2>
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
                 <article>
                     <h3>Bachelor of Science in Electrical Engineering</h3>
                     <p class="sub-info">The University of Texas at Austin, Austin, TX — Aug 2019 - May 2023</p>
@@ -423,7 +497,7 @@
                 </article>
             </section>
             <section id="skills">
-                <h2>Skills</h2>
+                <h2><i class="fas fa-code"></i> Skills</h2>
                 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
                     <div>
                         <h3>Languages</h3>
@@ -444,7 +518,7 @@
                 </div>
             </section>
             <section id="references">
-                <h2>References</h2>
+                <h2><i class="fas fa-address-book"></i> References</h2>
                 <p>The following are references who can attest to my professional qualifications and work experience:</p>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                     <div class="reference-item">
