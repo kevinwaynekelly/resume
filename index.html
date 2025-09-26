@@ -467,46 +467,77 @@
                     <p>During my time at the University of Texas at Austin, my education focused on developing strong skills in communication, testing, and iterative development, providing a solid foundation for my engineering career. This also provided me with years of professional experience in programming languages from binary to assembly to higher-level languages such as x86 Assembly, ARM Assembly, Java, Python, HTML, C++, C, JavaScript, and SQL.</p>
                 </article>
             </section>
-            <section id="projects">
-                <h2><i class="fas fa-tasks"></i> Projects</h2>
-                <article>
-                    <h3>Formal Circuit Verification Algorithm</h3>
-                    <p class="sub-info">Sponsored by Cadence Design Systems Inc.</p>
-		    <p>In collaboration with Cadence Design Systems, I developed a C++ tool to remove cycles from digital circuit graphs by identifying strongly connected components and applying feedback arc set algorithms. This process prepared RTL-level designs for use in formal verification tools. I implemented and compared multiple algorithms, including Tarjan’s SCC algorithm, Eades approximation, and backtracking approaches. The tool was optimized for performance and tested on varied circuit topologies to ensure efficiency and correctness.</p>
-                </article>
-                <article>
-                    <h3>ARM-Based USB Game Controller</h3>
-                    <p class="sub-info">Hardware Keystone</p>
-                    <p>At the University of Texas at Austin, I engineered the PCB and circuitry for a USB game controller integrating an ARM platform with two joysticks and 12 buttons. This project exemplified my ability to lead hardware design to software integration, demonstrating my comprehensive skills in hardware and software engineering as well as my capacity for problem-solving and efficient project execution.</p>
-                </article>
-                <article>
-                    <h3>Website Data Management and Deployment</h3>
-                    <p class="sub-info">Software Keystone</p>
-                    <p>During my educational journey, I led the full-stack deployment of a project management website utilizing React, Node.js, MongoDB, Heroku, Python, and SQL. This project demonstrated my ability to manage complex data systems and ensure efficient data handling, particularly through the integration of REST API calls for seamless data exchange and functionality enhancement. My involvement in this endeavor highlighted my solid foundation in software development and my proficiency in delivering comprehensive solutions tailored to operational requirements.</p>
-                </article>
-                <article>
-                    <h3>Real-Time Facial Expression Recognition</h3>
-                    <p class="sub-info">Digital Image Processing and Machine Learning</p>
-                    <p>This project used Python and OpenCV to implement real-time facial expression detection via Haar cascades. Expressions such as happiness, sadness, and surprise were mapped to smart home controls using IFTTT automation. This system demonstrated practical integration of embedded software, image processing, and network-connected devices for intuitive human-computer interaction.</p>
-				</article>
-                <article>
-                    <h3>AI Detection System Requirements</h3>
-                    <p class="sub-info">Requirements Engineering</p>
-                    <p>Centered on the critical task of requirements engineering, this project involved extensive stakeholder analysis, requirements elicitation, and system specification to develop a tool for detecting AI-generated content in academic work. By structuring detailed requirement sessions with stakeholders such as educators and IT professionals, and focusing on integration with learning management systems, the project emphasized a systematic approach to capturing precise functional and non-functional requirements, ensuring the tool effectively maintains academic integrity.</p>
-                </article>
-				<article>
-				    <h3>Unraid Home Server Deployment</h3>
-				    <p class="sub-info">Personal Project</p>
-				    <p>I architected and maintain an <strong>Unraid-based home server</strong> hosting a wide range of Dockerized microservices to optimize security, privacy, and performance. This includes:
-				        <ul>
-				            <li>Redundant storage arrays and parity drives for data integrity.</li>
-				            <li>Self-hosted DNS with private name resolution and caching layers to accelerate local requests.</li>
-				            <li>Reverse proxies, VPN tunneling, and network segmentation for secure access to services.</li>
-				            <li>Application containers for media management, automation pipelines, and monitoring dashboards.</li>
-				        </ul>
-				        The system runs across multiple Linux VMs integrated into the Unraid environment, where I develop, deploy, and tune containerized applications for efficient resource utilization. This project demonstrates practical experience in <strong>container orchestration, virtualization, and server administration</strong> using Unraid as the foundation.</p>
-				</article>
-            </section>
+			<section id="projects">
+			    <h2><i class="fas fa-tasks"></i> Projects</h2>
+			
+			    <article>
+			        <h3>Formal Circuit Verification Algorithm</h3>
+			        <p class="sub-info">Sponsored by Cadence Design Systems Inc.</p>
+			        <ul>
+			            <li>Developed a C++ tool to remove cycles from digital circuit graphs for formal verification workflows.</li>
+			            <li>Implemented Tarjan’s SCC algorithm, Eades approximation, and backtracking approaches for feedback arc set problems.</li>
+			            <li>Benchmarked and optimized algorithms for performance across varied RTL topologies.</li>
+			            <li>Prepared large RTL designs for industrial use in Cadence’s verification toolchain.</li>
+			        </ul>
+			    </article>
+			
+			    <article>
+			        <h3>ARM-Based USB Game Controller</h3>
+			        <p class="sub-info">Hardware Keystone</p>
+			        <ul>
+			            <li>Engineered PCB and circuitry for a custom USB game controller with an ARM microcontroller.</li>
+			            <li>Integrated two joysticks and 12 buttons with low-latency USB communication.</li>
+			            <li>Designed end-to-end solution from hardware schematics through embedded firmware integration.</li>
+			            <li>Demonstrated practical expertise in PCB design, embedded systems, and hardware/software interfacing.</li>
+			        </ul>
+			    </article>
+			
+			    <article>
+			        <h3>Website Data Management and Deployment</h3>
+			        <p class="sub-info">Software Keystone</p>
+			        <ul>
+			            <li>Led full-stack deployment of a project management website using React, Node.js, MongoDB, Heroku, Python, and SQL.</li>
+			            <li>Built REST APIs for seamless data exchange and efficient client-server communication.</li>
+			            <li>Managed complex database systems with secure and scalable handling of structured data.</li>
+			            <li>Delivered a production-ready platform demonstrating full-stack engineering capabilities.</li>
+			        </ul>
+			    </article>
+			
+			    <article>
+			        <h3>Real-Time Facial Expression Recognition</h3>
+			        <p class="sub-info">Digital Image Processing and Machine Learning</p>
+			        <ul>
+			            <li>Implemented real-time facial expression detection with Python and OpenCV using Haar cascades.</li>
+			            <li>Mapped expressions (happiness, sadness, surprise) to smart home automation events via IFTTT.</li>
+			            <li>Demonstrated integration of embedded software, computer vision, and IoT systems.</li>
+			            <li>Created an intuitive human-computer interaction pipeline with real-world applications.</li>
+			        </ul>
+			    </article>
+			
+			    <article>
+			        <h3>AI Detection System Requirements</h3>
+			        <p class="sub-info">Requirements Engineering</p>
+			        <ul>
+			            <li>Conducted stakeholder analysis with educators and IT professionals to capture system needs.</li>
+			            <li>Defined functional and non-functional requirements for an academic AI-content detection tool.</li>
+			            <li>Outlined integration with existing learning management systems to ensure adoption.</li>
+			            <li>Produced a structured, traceable requirements document for system development.</li>
+			        </ul>
+			    </article>
+			
+			    <article>
+			        <h3>Unraid Home Server Deployment</h3>
+			        <p class="sub-info">Personal Project</p>
+			        <ul>
+			            <li>Deployed and maintain an <strong>Unraid-based home server</strong> hosting Dockerized microservices.</li>
+			            <li>Configured redundant storage arrays and parity drives for fault tolerance and data integrity.</li>
+			            <li>Implemented self-hosted DNS with local caching to accelerate network requests.</li>
+			            <li>Configured reverse proxies, VPN tunneling, and network segmentation for security.</li>
+			            <li>Developed Linux VM workloads for media, automation pipelines, and monitoring dashboards.</li>
+			            <li>Demonstrated applied experience in container orchestration, virtualization, and sysadmin practices.</li>
+			        </ul>
+			    </article>
+			</section>
             <section id="employment-history">
                 <h2><i class="fas fa-briefcase"></i> Employment History</h2>
                 <article>
