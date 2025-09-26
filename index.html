@@ -685,7 +685,7 @@
             </section>
         </main>
 	<footer>
-	    <p><strong>&copy; 2025 Kevin Kelly. All rights reserved.</strong></p>
+	  <p><strong>&copy; <span id="copyright-year"></span> Kevin Kelly. All rights reserved.</strong></p>
 	</footer>
     </div>
 
@@ -707,5 +707,11 @@
             });
         });
     </script>
+	<script>
+	  document.addEventListener("DOMContentLoaded", () => {
+	    const year = new Date().getFullYear();
+	    document.getElementById("copyright-year").textContent = year;
+	  });
+	</script>
 </body>
 </html>
